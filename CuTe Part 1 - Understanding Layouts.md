@@ -1,4 +1,5 @@
 # Demystifying CuTe: Understanding Layout Algebra
+Or the fallacy of thinking that a new concept can be intuitive immediately.
 
 *Part 1 of 2 — From conceptual foundations to efficient memory operations*
 
@@ -9,12 +10,6 @@
 ---
 
 **TL;DR:** CuTe is a way to arbitrarily partition a custom layout or tensor and write it in extremely concise terms. In this post we will understand how these Layouts work and build efficient copy kernels—the foundation for high-performance GPU algorithms.
-
-<figure style="text-align: center;">
-  <img src="blogpost_imgs/substack_extra/sm80_mma.png" width="500">
-  <figcaption><em>Example layout of an SM80 type MMA operation in CuTe.</em></figcaption>
-</figure>
-
 
 *Disclaimer:* I don't try to replicate the NVIDIA documentation in this blogpost nor do I claim completeness. I want to show in a general way how CuTe layouts work and how they can be applied. For the really fancy algebra, I recommend doing your own exercises.
 
@@ -647,7 +642,7 @@ In [**Part 2: Building High-Performance GEMMs with CuTe**](CuTe%20Part%202%20-%2
 ---
 
 # Acknowledgments
-A big thank you to [Verda](https://verda.com/) and [Paul](https://x.com/edchangy) for providing the compute for this blogpost, to [Szymon](https://x.com/SzymonOzog_) for cross-reading and guidance on how to benchmark properly, and to Lukas Bluebaum for helping me fix some stupid bugs in the code.
+A big thank you to [Verda](https://verda.com/) and [Paul](https://x.com/edchangy) for providing the compute for this blogpost, to [Szymon](https://x.com/SzymonOzog_) for cross-reading and guidance on how to benchmark properly, and to [Lukas](https://x.com/LukasBluebaum) for helping me fix some stupid bugs in the code.
 
 # Further Reading
 - Docs [Nvidia](https://docs.nvidia.com/cutlass/media/docs/cpp/cute/00_quickstart.html)| [Github](https://github.com/NVIDIA/cutlass/blob/main/media/docs/cpp/cute)

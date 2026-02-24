@@ -1,12 +1,12 @@
 # DrowsyHummingbird
 
-This repository contains the kernels, as described in the blog post: 
+This repository contains the kernels, as described in the the two blogposts: [Demystifying CuTe: Understanding Layout Algebra](https://schreibereric.substack.com/p/demystifying-cute-understanding-layout) and [Demystifying CuTe: How to Write a Fast GEMM from Scratch](https://schreibereric.substack.com/p/demystifying-cute-how-to-write-a).
 
 The idea is to understand the CuTe library and explain intermediate level concepts in CUDA programming with it. The final mm kernels outperform cuBLAS for square matrices of size 2048 on A100 80GB GPUs.
 
-<!-- <div align="center">
+<div align="center">
 	<img src="figures/plots/mm_performance.png" alt="Matrix Multiplication Kernel Benchmarks" style="max-width:700px; width:75%; height:auto;" />
-</div> -->
+</div>
 
 ## Hardware Requirements
 

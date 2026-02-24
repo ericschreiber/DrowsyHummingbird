@@ -10,7 +10,6 @@ using namespace cute;
 
 typedef __nv_bfloat16 bf16;
 
-
 int main()
 {
 #if 0
@@ -32,7 +31,7 @@ int main()
     print_latex(tiled_copy);
     }
 #endif
-#if 1
+#if 0
   {
     // Async Copy
     auto tiled_copy =  make_tiled_copy(
@@ -80,23 +79,15 @@ int main()
     }
 #endif
 
-#if 0
+#if 1
   {
-    // Generate a TiledCopy layout from a TiledMMA
-    SM80_16x8x16_F32F16F16F32_TN mma;
-    auto tiled_mma = make_tiled_mma(mma);   // HMMA.16816 warp-wide MmaAtom. 32 threads, 1 warp. Each thread owns 4 output values.
+    // // Generate a TiledCopy layout from a TiledMMA
+    TiledMMA mmaABOut = make_tiled_mma(SM80_16x8x16_F32BF16BF16F32_TN{}); // 32x32x16 Tiled MMA for LDSM
 
-    // Pick an Atom
-    //Copy_Atom<DefaultCopy, uint16_t> copy_atom;
-    //Copy_Atom<SM75_U16x2_LDSM_T, uint16_t> copy_atom;
-    //Copy_Atom<SM75_U16x4_LDSM_T, uint16_t> copy_atom;
-    Copy_Atom<SM75_U16x8_LDSM_T, uint16_t> copy_atom;
-
-    // Define the layout of threads and values from the tiled_mma
-    auto tiled_copy = make_tiled_copy_A(copy_atom, tiled_mma);
-    print_latex(tiled_copy);
-
-    }
+    Copy_Atom<SM75_U32x4_LDSM_N, bf16> s2r_atom;
+    auto copyS2R_A = make_tiled_copy_A(s2r_atom, mmaABOut);
+    print_latex(copyS2R_A);
+  }
 #endif
 
 #if 0

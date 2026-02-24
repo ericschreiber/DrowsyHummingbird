@@ -32,7 +32,7 @@ int main()
               ));
      }
 #endif 
-#if 1
+#if 0
   {
     print_latex(
      composition(
@@ -42,6 +42,17 @@ int main()
     )
   );
      }
+#endif
+#if 1
+  {
+    auto swizzled_128B_atom = composition(
+                    Swizzle<3,3,3>{},
+                    make_layout(
+                        make_shape(Int<8>{}, make_shape(Int<8>{}, Int<8>{})),
+                        make_stride(Int<8>{}, make_stride(Int<1>{}, Int<64>{})))
+                    );
+    print_latex(swizzled_128B_atom);
+  }
 #endif 
 #if 0
   {
