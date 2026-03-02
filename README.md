@@ -1,4 +1,4 @@
-# DrowsyHummingbird
+# Demystifying CuTe: Understanding Layout Algebra and Writing a Fast GEMM from Scratch
 
 This repository contains the kernels, as described in the the two blogposts: [Demystifying CuTe: Understanding Layout Algebra](https://schreibereric.substack.com/p/demystifying-cute-understanding-layout) and [Demystifying CuTe: How to Write a Fast GEMM from Scratch](https://schreibereric.substack.com/p/demystifying-cute-how-to-write-a).
 
@@ -84,4 +84,16 @@ To run its profiles run
 
 ```bash
 make python_profile
+```
+
+
+# Citation
+```bibtex
+@misc{schreiber2026demystifying_cute,
+  author       = {Schreiber, Eric},
+  title        = {Demystifying CuTe: Understanding Layout Algebra and Writing a Fast GEMM from Scratch},
+  year         = {2026},
+  url          = {https://github.com/ericschreiber/DrowsyHummingbird},
+  note         = {Blog post series on NVIDIA CuTe library and CUDA programming},
+}
 ```

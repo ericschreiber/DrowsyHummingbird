@@ -648,3 +648,14 @@ A big thank you to [Verda](https://verda.com/) and [Paul](https://x.com/edchangy
 - Docs [Nvidia](https://docs.nvidia.com/cutlass/media/docs/cpp/cute/00_quickstart.html)| [Github](https://github.com/NVIDIA/cutlass/blob/main/media/docs/cpp/cute)
 - GPUMode [Lecture 15](https://www.youtube.com/watch?v=G6q719ck7ww) (Overview of CUTLASS, CuTe algebra)
 - GPUMode [Lecture 57](https://www.youtube.com/watch?v=vzUhbDO_0qk) (Deep dive into CuTe with Cris Cecka.)
+
+# Citation
+```bibtex
+@misc{schreiber2026demystifying_cute,
+  author       = {Schreiber, Eric},
+  title        = {Demystifying CuTe: Understanding Layout Algebra and Writing a Fast GEMM from Scratch},
+  year         = {2026},
+  url          = {https://github.com/ericschreiber/DrowsyHummingbird},
+  note         = {Blog post series on NVIDIA CuTe library and CUDA programming},
+}
+```
